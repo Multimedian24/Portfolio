@@ -1,0 +1,355 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Sticky Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: orange;
+}
+
+header #theme-toggle {
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Logo Style */
+.logo {
+    height: 60px; /* Adjust size as needed */
+    margin-right: 30px;
+}
+
+/* Navigation Button Style */
+nav {
+    display: flex; /* Use flex to space buttons */
+}
+
+.nav-button {
+    background-color:white; /* Button background color */
+    color:black; /* Button text color */
+    padding: 10px 20px; /* Padding for button size */
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    margin-left: 10px; /* Spacing between buttons */
+    text-decoration: none; /* No underline */
+    font-size: 12px; /* Font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.nav-button:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+
+/* Banner Section */
+.banner {
+    background-color:orange;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner img {
+    width: 200px;
+    border-radius: 80%;
+    animation: zoomIn 1s ease-out forwards;
+}
+
+.banner h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:White;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.skills ul, .projects ul {
+    list-style-type: circle;
+    padding: 0;
+}
+
+.skills li, .projects li {
+    margin-bottom: 10px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+    background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: orange;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    text-decoration: underline;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for zoom-in effect */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Theme - Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode section {
+    background-color: #333;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+}
+/* Projects Button Style */
+.project-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+.project-button {
+    background-color: white; /* Button background color */
+    color: black; /* Button text color */
+    padding: 15px 30px; /* Padding for button size */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 20px; /* Larger font size */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    width: 250px; /* Fixed width for uniformity */
+}
+
+.project-button:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+    transform: scale(1.05); /* Scale up on hover */
+    /* Projects Section Style */
+}
+.projects {
+    background-color:orange; /* Black background color */
+    padding: 40px 20px; /* Padding for space around content */
+    margin: 0; /* Remove margin to fill the width */
+    color: #fff; /* White text color for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.projects h2 {
+    font-size: 30px; /* Heading font size */
+    margin-bottom: 15px; /* Space below the heading */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+/* About Me Section Style */
+.about {
+    background-color: #f2f2f2; /* Light gray background color */
+    padding: 40px 20px; /* Padding for space around content */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 600px; /* Max width for smaller size */
+    margin: 20px auto; /* Center horizontally and add vertical margin */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about h2 {
+    font-size: 30px; /* Slightly smaller heading */
+    margin-bottom: 15px; /* Space below the heading */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about p {
+    font-size: 16px; /* Adjust paragraph font size */
+    line-height: 1.5; /* Increase line height for readability */
+}
+/* Skills Section Style */
+.skills {
+    background-color: orange; /* Orange background color */
+    padding: 40px 20px; /* Padding for space around content */
+    border-radius: 0; /* No rounded corners for full-width */
+    margin: 0; /* Remove margin to fill the width */
+    color: black; /* White text color for contrast */
+    box-shadow: none; /* Remove shadow for full-width */
+}
+
+.skills h2 {
+    font-size: 24px; /* Slightly smaller heading */
+    margin-bottom: 15px; /* Space below the heading */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.skills ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.skills li {
+    font-size: 18px; /* Adjust list item font size */
+    margin: 5px 0; /* Space between list items */
+}
+.Education h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
